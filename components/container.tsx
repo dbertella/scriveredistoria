@@ -1,11 +1,8 @@
-import { ReactNode, FunctionComponent } from 'react'
+import { FC } from "react";
+import { Box } from "theme-ui";
 
-type Props = {
-  children?: ReactNode
-}
+const Container: FC = (props) => {
+  return <Box sx={{ m: "0 auto", px: 3 }} {...props} />;
+};
 
-const Container: FunctionComponent = ({ children }: Props) => {
-  return <div className="container mx-auto px-5">{children}</div>
-}
-
-export default Container
+export default Container;

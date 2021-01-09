@@ -1,17 +1,21 @@
-import PostPreview from './post-preview'
-import Post from '../types/post'
+import { Grid, Box, Heading } from "theme-ui";
+import PostPreview from "./post-preview";
+import { useRef } from "react";
+
+import Post from "../types/post";
 
 type Props = {
-  posts: Post[]
-}
+  posts: Post[];
+};
 
-const MoreStories = ({ posts }: Props) => {
+export default function MoreStories({ posts }: Props) {
   return (
-    <section>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
-        More Stories
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+    <Box
+      as="section"
+      variant="styles.container"
+      sx={{ position: "relative", zIndex: 1 }}
+    >
+      <Grid columns={["auto", "1fr 1fr"]} gap={3}>
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -23,9 +27,7 @@ const MoreStories = ({ posts }: Props) => {
             excerpt={post.excerpt}
           />
         ))}
-      </div>
-    </section>
-  )
+      </Grid>
+    </Box>
+  );
 }
-
-export default MoreStories

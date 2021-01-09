@@ -1,15 +1,17 @@
+import { Flex, Image, Text } from "theme-ui";
+
 type Props = {
-  name: string
-  picture: string
-}
+  name: string;
+  picture: string;
+};
 
 const Avatar = ({ name, picture }: Props) => {
   return (
-    <div className="flex items-center">
-      <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
-      <div className="text-xl font-bold">{name}</div>
-    </div>
-  )
-}
+    <Flex sx={{ gap: 2, mt: 2 }}>
+      <Image src={picture} sx={{ width: 35, height: 35, borderRadius: 9 }} alt={name} />
+      <Text sx={{ fontSize: 4, fontWeight: "bold" }}>{name}</Text>
+    </Flex>
+  );
+};
 
-export default Avatar
+export default Avatar;

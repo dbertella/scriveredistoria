@@ -1,14 +1,15 @@
-import Link from 'next/link'
+import Link from "next/link";
+import { Heading } from "theme-ui";
 
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
+    <Heading as="h2" sx={{ mt: 2 }}>
       <Link href="/">
-        <a className="hover:underline">Blog</a>
+        <a>Home</a>
       </Link>
       .
-    </h2>
-  )
-}
+    </Heading>
+  );
+};
 
-export default Header
+export default Header;
