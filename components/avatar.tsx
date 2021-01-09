@@ -7,13 +7,13 @@ type Props = {
 
 const Avatar = ({ name, picture }: Props) => {
   return (
-    <Flex sx={{ gap: 2, my: 3, alignItems: "center" }}>
+    <Flex sx={{ my: 3, alignItems: "center" }}>
       <Image
         src={picture}
-        sx={{ width: 35, height: 35, borderRadius: 9 }}
+        sx={{ width: 35, height: 35, borderRadius: "50%" }}
         alt={name}
       />
-      <Text sx={{ fontSize: 3 }}>{name}</Text>
+      <Text sx={{ fontSize: 3, ml: 2 }}>{name}</Text>
     </Flex>
   );
 };

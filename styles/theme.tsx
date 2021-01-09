@@ -1,3 +1,5 @@
+import { Theme } from "theme-ui";
+
 export default {
   breakpoints: ["30em", "48em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -24,6 +26,7 @@ export default {
     secondary: "#114810ff",
     muted: "#e6e6f0ff",
     darkGrey: "#787878",
+    shadow: "rgba(0, 0, 0, 0.125)",
     modes: {
       dark: {
         text: "#fafafa",
@@ -32,6 +35,7 @@ export default {
         secondary: "#bbb",
         muted: "#787878",
         darkGrey: "#aaa",
+        shadow: "rgba(0, 0, 0, 0.4)",
       },
     },
   },
@@ -40,7 +44,7 @@ export default {
       padding: 3,
       borderRadius: 4,
       bg: "backgroundTransparent",
-      boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
+      boxShadow: (t: Theme) => `0 0 8px ${t.colors?.shadow}`,
     },
     compact: {
       padding: 1,
