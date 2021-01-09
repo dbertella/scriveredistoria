@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Box } from "theme-ui";
 
 const Container: FC = (props) => {
-  return <Box sx={{ m: "0 auto", px: 3 }} {...props} />;
+  return <Box variant="styles.container" {...props} />;
 };
 
 export default Container;

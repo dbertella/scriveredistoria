@@ -7,7 +7,7 @@ export default {
     heading: '"Source Sans Pro", sans-serif',
     monospace: "Menlo, monospace",
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [14, 16, 18, 22, 26, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -20,7 +20,7 @@ export default {
   colors: {
     text: "#464E47",
     background: "#fafafa",
-    primary: "#97BF0Dff",
+    primary: "#000",
     secondary: "#114810ff",
     muted: "#e6e6f0ff",
     textTransparent: "#464E4711",
@@ -29,7 +29,7 @@ export default {
     secondaryTransparent: "#11481087",
     mutedTransparent: "#e6e6f0aa",
     darkGrey: "#787878",
-    lightGrey: "#ababab",
+    lightGrey: "#eee",
   },
   cards: {
     primary: {
@@ -89,6 +89,8 @@ export default {
       fontWeight: "body",
       bg: "background",
       overflowX: "hidden",
+      fontSize: [2, null, 3],
+
       h1: {
         color: "text",
         fontFamily: "heading",
@@ -174,18 +176,8 @@ export default {
         width: "100%",
       },
       blockquote: {
-        fontSize: [3, null, 4],
-        position: "relative",
         mx: 0,
         px: 4,
-        "&:before": {
-          content: "url(/icons/check.svg)",
-          width: 20,
-          height: 20,
-          position: "absolute",
-          left: 0,
-          top: "2px",
-        },
       },
     },
     container: {
@@ -193,7 +185,6 @@ export default {
       my: 2,
       mx: "auto",
       px: [3, 4],
-      fontSize: [2, null, 3],
     },
   },
 };

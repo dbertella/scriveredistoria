@@ -1,24 +1,29 @@
 import Avatar from "./avatar";
-import DateFormatter from "./date-formatter";
-import CoverImage from "./cover-image";
 import PostTitle from "./post-title";
 import Author from "../types/author";
+import { Box, Flex, Image } from "theme-ui";
 
 type Props = {
   title: string;
   coverImage: string;
-  date: string;
   author: Author;
 };
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => {
+const PostHeader = ({ title, coverImage, author }: Props) => {
   return (
-    <>
+    <Box sx={{ my: 5 }}>
       <PostTitle>{title}</PostTitle>
       <Avatar name={author.name} picture={author.picture} />
-      <CoverImage title={title} src={coverImage} />
-      <DateFormatter dateString={date} />
-    </>
+      <Box my={4} />
+      <Flex
+        sx={{
+          justifyContent: "center",
+        }}
+      >
+        <Image alt={title} src={coverImage} />
+      </Flex>
+      <Box my={5} />
+    </Box>
   );
 };
 

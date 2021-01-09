@@ -27,12 +27,18 @@ const PostPreview = ({
   return (
     <Card sx={{ display: "flex", flexDirection: "column" }}>
       <Box
-        // sx={{ position: "relative", height: [150, null, 200], m: -3, mb: 1 }}
+        sx={{ position: "relative", height: [150, null, 200], m: -3, mb: 1 }}
       >
         <CoverImage slug={slug} title={title} src={coverImage} />
       </Box>
-      <DateFormatter dateString={date} />
-
+      <Text
+        sx={{
+          py: 2,
+          color: "darkGrey",
+        }}
+      >
+        <DateFormatter dateString={date} />
+      </Text>
       <Heading as="h3" sx={{ mb: 3 }}>
         <Link href={`/posts/${slug}`}>
           <a>{title}</a>

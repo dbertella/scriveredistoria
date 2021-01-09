@@ -10,11 +10,7 @@ type Props = {
 
 export default function MoreStories({ posts }: Props) {
   return (
-    <Box
-      as="section"
-      variant="styles.container"
-      sx={{ position: "relative", zIndex: 1 }}
-    >
+    <Box as="section" sx={{ position: "relative", zIndex: 1 }}>
       <Grid columns={["auto", "1fr 1fr"]} gap={3}>
         {posts.map((post) => (
           <PostPreview

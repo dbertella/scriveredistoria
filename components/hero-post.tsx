@@ -24,20 +24,24 @@ const HeroPost = ({
 }: Props) => {
   return (
     <Box>
-      <CoverImage title={title} src={coverImage} slug={slug} />
       <Box
-        sx={{ maxWidth: "48em", my: [3, 4, 5], mx: "auto" }}
-        variant="styles.container"
+        sx={{
+          position: "relative",
+          height: 500,
+        }}
       >
-        <Heading as="h3">
+        <CoverImage title={title} src={coverImage} slug={slug} />
+      </Box>
+
+      <Box sx={{ maxWidth: "48em", my: [3, 4, 5], mx: "auto" }}>
+        <Heading as="h3" sx={{ fontSize: 5 }}>
           <Link href={`/posts/${slug}`} passHref>
             <a>{title}</a>
           </Link>
         </Heading>
         <Text
           sx={{
-            p: 1,
-            fontSize: 0,
+            py: 2,
             color: "darkGrey",
           }}
         >
