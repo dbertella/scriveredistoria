@@ -23,13 +23,17 @@ export default {
     primary: "#000",
     secondary: "#114810ff",
     muted: "#e6e6f0ff",
-    textTransparent: "#464E4711",
-    backgroundTransparent: "#fafafaaa",
-    primaryTransparent: "#97BF0D33",
-    secondaryTransparent: "#11481087",
-    mutedTransparent: "#e6e6f0aa",
     darkGrey: "#787878",
-    lightGrey: "#eee",
+    modes: {
+      dark: {
+        text: "#fafafa",
+        background: "#333",
+        primary: "#fff",
+        secondary: "#bbb",
+        muted: "#787878",
+        darkGrey: "#aaa",
+      },
+    },
   },
   cards: {
     primary: {
